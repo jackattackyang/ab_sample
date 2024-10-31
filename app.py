@@ -44,6 +44,7 @@ alpha = st.sidebar.slider(
     format="%.0f%%",
     help='Percent of time when a difference will be detected, assuming NONE exists. Also known as false positive or type I error',
 )
+st.sidebar.markdown("Reference: [Evan Miller's Online A/B Testing Tools](https://www.evanmiller.org/ab-testing/sample-size.html)")
 
 alpha /= 100
 power /= 100
