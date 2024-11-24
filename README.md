@@ -2,10 +2,13 @@
 
 An [app](https://jackattackyang-ab-sample-app-craeac.streamlit.app/) for calculating the sample size needed for a two sample proportion A/B test.
 
-![demo](images/demo.mp4)
+<video controls>
+  <source src="images/demo.mp4" type="video/mp4">
+</video>
 
 ## Derivation
 Two group comparison (equal sample size):
+
 $$
 n=(\frac{z_{\alpha/2}\cdot\sqrt{2 \cdot μ_{pooled}(1-μ_{pooled})}+z_\beta\cdot \sqrt{μ_0(1-μ_0)+μ_1(1-μ_1)}}{|μ_0-μ_1|})^2
 $$
@@ -20,6 +23,7 @@ Details
 $$
 μ_0 + z_{1−α/2}SE+z_{1-β}SE=μ_1
 $$
+
 When conducting a two sampled experiment, we may be sampling from the Null or the Alternate Distributions
 - $H_0: μ_0-μ_1=0$: The Null hypothesis assumes no difference between the population means.
 - $H_1: μ_0-μ_1=δ$: The Alternate hypothesis assumes a difference δ between the population means.
@@ -62,16 +66,21 @@ n=\frac{2\sigma^2(z_{1−α/2}+z_{1−β/2})^2}{(μ_1-μ_0)^2}
 $$
 
 Unequal group sizes, with $k=n2/n1$
+
 $$
 n_1=\frac{\sigma^2(z_{1−α/2}+z_{1−β/2})^2}{(μ_1-μ_0)^2(1+1/k)}
 $$
+
 $$
 n_2=k\cdot n_1
 $$
+
 SE for unequal sample size
+
 $$
 SE=\sigma^2(\frac{1}{n_1}+\frac{1}{n_2})
 $$
+
 $$
 SE=\sigma^2(\frac{1}{n_1}+\frac{1}{k\cdot n_1})=\sigma^2\frac{1+1/k}{n_1}
 $$
