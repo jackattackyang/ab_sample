@@ -16,7 +16,8 @@ $$
 $$
 
 Details
-![Sampling Distributions](images/null_alt.png)
+<img src="images/null_alt.png" width="600" height="400" />
+
 
 $$
 μ_0 + z_{1−α/2}SE+z_{1-β}SE=μ_1
