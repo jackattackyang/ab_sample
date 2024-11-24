@@ -2,10 +2,7 @@
 
 An [app](https://jackattackyang-ab-sample-app-craeac.streamlit.app/) for calculating the sample size needed for a two sample proportion A/B test.
 
-<video controls>
-  <source src="images/demo.mp4" type="video/mp4">
-  lol
-</video>
+![Alt Text](images/demo.gif)
 
 ## Derivation
 Two group comparison (equal sample size):
