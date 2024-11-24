@@ -2,6 +2,8 @@
 
 An [app](https://jackattackyang-ab-sample-app-craeac.streamlit.app/) for calculating the sample size needed for a two sample proportion A/B test.
 
+![demo](images/demo.mp4)
+
 ## Derivation
 Two group comparison (equal sample size):
 $$
@@ -13,7 +15,7 @@ $$
 $$
 
 Details
-![Sampling Distributions](image/null_alt.png)
+![Sampling Distributions](images/null_alt.png)
 
 $$
 μ_0 + z_{1−α/2}SE+z_{1-β}SE=μ_1
