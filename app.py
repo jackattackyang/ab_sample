@@ -23,6 +23,16 @@ p1 = st.sidebar.number_input('Baseline Conversion Rate (%)', value=20.0, step=1.
 mde = st.sidebar.number_input('Minimum Detectable Effect (%)', value=5.0, step=1.0, format="%.2f",)
 mde_type = st.sidebar.radio("Effect Type", ["Absolute", "Relative"])
 
+n2 = st.sidebar.slider(
+    'Test Sample Proportion: ',
+    min_value=1,
+    max_value=99,
+    value=50,
+    step=1,
+    key='n2',
+    format="%.0f%%",
+    help='Percent proportion for the test sample',
+)
 
 power = st.sidebar.slider(
     'Statistical Power (1-β): ',
@@ -55,7 +65,8 @@ if mde_type == 'Absolute':
 else:
     p2 = p1 * (1+mde)
 
-n2 = 0.5
+# n2 = 0.5
+n2 /= 100
 n1 = 1-n2
 k = n1 / n2
 
@@ -72,7 +83,9 @@ n1 = n2*k
 col1, col2, col3 = st.columns([1, 1, 1])  # Adjust ratios to center properly
 with col2:
     st.write(f"## {n1:.0f}")
-    st.caption("Sample size per variation")
+    st.caption("Sample size per control")
+    st.write(f"## {n2:.0f}")
+    st.caption("Sample size for test")
 
 std_dev_null = math.sqrt(p_pooled * (1-p_pooled) * (1/n1+1/n2))
 std_dev_alternate = math.sqrt(var_1 / n1 + var_2 / n2)
