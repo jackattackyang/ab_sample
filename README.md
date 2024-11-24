@@ -16,6 +16,7 @@ $$
 $$
 
 Details
+
 <img src="images/null_alt.png" width="600" height="400" />
 
 
